@@ -7,6 +7,7 @@ public class ReverseOrder {
     }
 
     static int[] reverse(int[] table, int amount){
+        int[] tableRev = new int[table.length];
         if(table==null || table.length==0 || amount>table.length){
             return table;
 
@@ -14,12 +15,12 @@ public class ReverseOrder {
             for (int i = 0; i <table.length ; i++) {
 
                 if(i<amount){
-                    table[i]=table[amount-i-1];
+                    tableRev[i]=table[amount-i-1];
                 }else{
-                    table[i]=table[i];
+                    tableRev[i]=table[i];
                 }
             }
-            return table;
+            return tableRev;
         }
 
     }
